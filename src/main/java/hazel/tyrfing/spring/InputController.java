@@ -2,6 +2,7 @@ package hazel.tyrfing.spring;
 
 import hazel.tyrfing.engine.GameEngine;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -10,7 +11,7 @@ public class InputController {
 
     private final GameEngine gameEngine = new GameEngine();
 
-    @PostMapping("/")
+    @GetMapping("/")
     @ResponseBody
     public String setUp(){
         return "Webpage.html";
