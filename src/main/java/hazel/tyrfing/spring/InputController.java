@@ -14,7 +14,7 @@ public class InputController {
     @GetMapping("/")
     @ResponseBody
     public String setUp(){
-        return "Webpage.html";
+        return "webpage";
     }
 
     public void initial(){
