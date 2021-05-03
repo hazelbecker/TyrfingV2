@@ -6,15 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.swing.text.html.HTML;
+
 @Controller
 public class InputController {
 
     private final GameEngine gameEngine = new GameEngine();
 
     @GetMapping("/")
-    @ResponseBody
     public String setUp(){
-        return "webpage";
+        return "webpage.html";
     }
 
     public void initial(){
