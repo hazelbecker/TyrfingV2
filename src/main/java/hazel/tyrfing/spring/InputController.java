@@ -4,9 +4,6 @@ import hazel.tyrfing.engine.GameEngine;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.swing.text.html.HTML;
 
 @Controller
 public class InputController {
@@ -18,10 +15,14 @@ public class InputController {
         return "webpage.html";
     }
 
-    public void initial(){
+    @PostMapping("/")
+    public String initial(){
+
+        return "uwu";
+
         //if the player hits A
-        gameEngine.setAreaId(1);
-        gameEngine.runInput();
+        //gameEngine.setAreaId(1);
+        //gameEngine.runInput();
     }
 
 
